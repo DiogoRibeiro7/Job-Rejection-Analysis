@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "job-rejection-analysis"
+version = "0.1.0"
+
+description = "Exploratory analysis of job rejection emails with an NLP showcase"
+authors = ["Unknown"]
+packages = []
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "*"
+numpy = "*"
+nltk = "*"
+scikit-learn = "*"
+matplotlib = "^3.10.3"
+transformers = "*"
+torch = "*"
+requests = "*"
+beautifulsoup4 = "*"
+fastapi = "*"
+jsonschema = "*"
+
+
+[tool.poetry.scripts]
+wordcloud = "wordcloud_module:generate_wordcloud"
+textstat = "textstat_module:analyze_text"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
