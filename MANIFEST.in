@@ -1,0 +1,19 @@
+# Include documentation
+include README.md
+include LICENSE
+include CONTRIBUTING.md
+include ROADMAP.md
+
+# Include schema files
+recursive-include schemas *.json
+
+# Include sample data
+include data/samples/*.json
+
+# Include test data
+recursive-include tests *.py
+
+# Exclude compiled Python files
+global-exclude __pycache__
+global-exclude *.py[co]
+global-exclude .DS_Store
