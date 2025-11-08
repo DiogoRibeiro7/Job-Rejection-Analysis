@@ -1,0 +1,39 @@
+feat: Restructure project into proper Python package with comprehensive tooling
+
+Major restructuring to transform the project into a professional, installable
+Python package with modern development workflow.
+
+Key Changes:
+- Organize code into src/ package structure (nlp/, visualization/, web/, cli/, data_processing/)
+- Create proper package configuration (setup.py, MANIFEST.in)
+- Add __init__.py files exposing main functions/classes from each module
+- Reorganize tests/ to mirror src/ structure
+- Update all imports to work with new package structure
+- Restructure data/ directory (raw/, processed/, samples/)
+- Create comprehensive Makefile with 30+ development targets
+- Update README.md with new structure, installation, and usage instructions
+- Add development documentation (MAKEFILE.md)
+
+Package Structure:
+- src/nlp/: NLP analysis modules with utilities, topic modeling, sentiment analysis
+- src/visualization/: Data visualization scripts for charts, word clouds, clusters
+- src/web/: Streamlit dashboard and FastAPI REST API
+- src/cli/: Command-line interface with entry points
+- src/data_processing/: Email scraper, validation, schema versioning, multi-tenant
+- tests/: Comprehensive test suite mirroring src/ structure
+
+Developer Experience:
+- Simple installation: pip install -e ".[all]"
+- Entry points: job-rejection, job-rejection-dashboard
+- Make targets: install, test, lint, format, clean, build, run-*
+- Proper import paths throughout codebase
+- Updated data paths: data/raw/rejections.csv
+
+Breaking Changes:
+- Module imports changed from "from src.nlp" to "from nlp"
+- Data paths changed from "data/rejections.csv" to "data/raw/rejections.csv"
+- Poetry workflow replaced with pip + setup.py
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
